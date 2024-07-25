@@ -50,19 +50,17 @@ func becomeAdmin() {
 
 	err := windows.ShellExecute(0, verbPtr, exePtr, argPtr, cwdPtr, showCmd)
 	if err != nil {
-		fmt.Println(err)
+		log.Fatal("Failed to run as admin. ", "Error", err)
 	}
 }
 
 func loop() {
 	giu.SingleWindow().Layout(
 		giu.Button("").OnClick(func() {
-			log.Info("Change MAC Address button clicked")
 			changeMacAddress()
 		}).ID("Change MAC Address"),
 
 		giu.Button("").OnClick(func() {
-			fmt.Println("Restore original MAC Address button clicked")
 			restoreMacAddress(original)
 			originalAddress, err := readValueFromFile("original_address")
 			if err != nil {
@@ -72,7 +70,6 @@ func loop() {
 		}).ID("Restore original MAC Address"),
 
 		giu.Button("").OnClick(func() {
-			fmt.Println("Restore previous MAC Address button clicked")
 			restoreMacAddress(previous)
 			previousAddress, err := readValueFromFile("previous_address")
 			if err != nil {
@@ -92,8 +89,7 @@ func main() {
 
 	}
 
-	giu.NewMasterWindow("Mini MAC Changer", 640, 480, 0).Run(loop)
-
+	giu.NewMasterWindow("[MMC]", 225, 90, giu.MasterWindowFlagsNotResizable).Run(loop)
 }
 
 func getMacAddress() ([]string, error) {
