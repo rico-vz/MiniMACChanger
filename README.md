@@ -11,7 +11,7 @@ A simple lightweight MAC address changer/spoofer for Windows using a GUI, writte
 
 ## Requirements
 
-- Windows operating system
+- Windows
 - Go 1.16 or higher
 
 ## Installation
