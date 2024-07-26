@@ -30,3 +30,7 @@ A simple lightweight MAC address changer/spoofer for Windows using a GUI, writte
 ## Note
 
 Changing MAC addresses may temporarily disrupt your internet connectivity.
+
+---
+
+<a href="https://rico.sh"><img src="https://img.shields.io/badge/%E2%AD%90-rico.sh-white?labelColor=rgb(246, 129, 2)&style=flat" alt="⭐" /></a>
