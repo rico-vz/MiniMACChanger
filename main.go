@@ -30,9 +30,12 @@ const (
 )
 
 func checkAdmin() bool {
-	_, err := os.Open("\\\\.\\PHYSICALDRIVE0")
-
-	return err == nil
+	file, err := os.Open("\\\\.\\PHYSICALDRIVE0")
+	if err == nil {
+		defer file.Close()
+		return true
+	}
+	return false
 }
 
 func becomeAdmin() {
