@@ -1,14 +1,18 @@
 module rico-vz/MiniMACChanger
 
-go 1.22.4
+go 1.25.0
+
+require (
+	github.com/AllenDang/giu v0.8.1
+	github.com/charmbracelet/log v0.4.0
+	golang.org/x/sys v0.13.0
+)
 
 require (
 	github.com/AllenDang/cimgui-go v0.0.0-20240424153022-294abe7370df // indirect
-	github.com/AllenDang/giu v0.8.1 // indirect
 	github.com/AllenDang/go-findfont v0.0.0-20200702051237-9f180485aeb8 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
 	github.com/charmbracelet/lipgloss v0.10.0 // indirect
-	github.com/charmbracelet/log v0.4.0 // indirect
 	github.com/faiface/mainthread v0.0.0-20171120011319-8b78f0a41ae3 // indirect
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
 	github.com/lucasb-eyer/go-colorful v1.2.0 // indirect
@@ -24,7 +28,6 @@ require (
 	golang.design/x/hotkey v0.4.1 // indirect
 	golang.design/x/mainthread v0.3.0 // indirect
 	golang.org/x/exp v0.0.0-20231006140011-7918f672742d // indirect
-	golang.org/x/image v0.18.0 // indirect
-	golang.org/x/sys v0.13.0 // indirect
+	golang.org/x/image v0.38.0 // indirect
 	gopkg.in/eapache/queue.v1 v1.1.0 // indirect
 )
